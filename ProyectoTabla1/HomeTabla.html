@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabla1</title>
+    <style>
+        
+        th {
+            background-color: burlywood;
+            border-right:2px solid black;
+            padding-left:2px;margin-left:2px;
+            border-top:2px solid black;
+            border-bottom:2px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <form oninput = "subtotal1.value = parseInt(qty1.value) * parseInt(price1.value);
+                    subtotal2.value = parseInt(qty2.value) * parseInt(price2.value);
+                    subtotal3.value = parseInt(qty3.value) * parseInt(price3.value);
+                    subtotal4.value = parseInt(qty4.value) * parseInt(price4.value);
+                    total1.value = parseInt(subtotal1.value) * parseInt(subtotal2.value) * parseInt(subtotal3.value) * parseInt(subtotal4.value);
+                    ">
+
+    <table>
+
+        <tr>
+            <th>Linea</th>
+            <th>Productos</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Subtotal</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Zaptatillas</td>
+            <td><input type="number" id="qty1"></td>
+            <td><input type="number" id="price1"></td>
+            <td><output id="subtotal1"></output></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Camisetas</td>
+            <td><input type="number" id="qty2"></td>
+            <td><input type="number" id="price2"></td>
+            <td><output id="subtotal2"></output></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Sudaderas</td>
+            <td><input type="number" id="qty3"></td>
+            <td><input type="number" id="price3"></td>
+            <td><output id="subtotal3"></output></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Chaquetas</td>
+            <td><input type="number" id="qty4"></td>
+            <td><input type="number" id="price4"></td>
+            <td><output id="subtotal4"></output></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <th>Total</th>
+            <td><output id="total1"></td>
+        </tr>
+        
+    </table>
+    </form>
+</body>
+</html>
